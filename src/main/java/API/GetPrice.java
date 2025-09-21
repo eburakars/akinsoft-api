@@ -20,7 +20,7 @@ public class GetPrice implements ItemCallable {
     @Override
     public String mainQuery() {
         return """
-                  SELECT sf.BLKODU, sf.BLSTKODU, sf.TANIMI, sf.FIYATI, sf.ALIS_SATIS, sf.FIYAT_NO, s.BARKODU, s.BLKODU
+                  SELECT sf.BLKODU, sf.BLSTKODU, sf.TANIMI, sf.FIYATI, sf.ALIS_SATIS, sf.FIYAT_NO, s.BARKODU, s.BLKODU, s.STOKKODU, s.STOK_ADI, s.KDV_ORANI
                   FROM STOK as s, STOK_FIYAT as sf
                   WHERE s.BLKODU = sf.BLSTKODU AND
                 """;
@@ -31,25 +31,22 @@ public class GetPrice implements ItemCallable {
         ResultSet res = stat.executeQuery(getQuery(req));
         JSONArray items = new JSONArray();
         while (res.next()) {
-            System.out.println("1");
             JSONObject item = new JSONObject();
             for (int i = 0; i < items.length(); i++) {
-                System.out.println("2");
                 JSONObject o = items.getJSONObject(i);
                 String barcode = o.getString("barcode");
-                System.out.println(barcode);
-                System.out.println(res.getString("BARKODU"));
                 if (barcode.contains(res.getString("BARKODU"))) {
                     item = o;
-                    System.out.println("3");
                 }
             }
             if (!item.has("barcode")) {
                 item.put("blstcode", res.getInt("BLSTKODU"));
                 item.put("barcode", res.getString("BARKODU"));
+                item.put("sku", res.getString("STOKKODU"));
+                item.put("name", res.getString("STOK_ADI"));
+                item.put("tax", res.getDouble("KDV_ORANI"));
                 item.put("sell_prices", new JSONArray());
                 item.put("buy_prices", new JSONArray());
-                System.out.println("4");
             }
             JSONObject price = new JSONObject();
             price.put("defination", res.getString("TANIMI"));

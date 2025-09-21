@@ -1,0 +1,15 @@
+Utils/Json.class
+App.class
+API/PostStockTransaction$1.class
+API/ItemCallable$1.class
+API/ItemCallable$fromBarcode.class
+API/GetPrice.class
+API/PostStockTransaction.class
+API/ItemCallable$Callable.class
+Utils/Connector.class
+API/GetStockTransactions$1.class
+API/GetItem.class
+API/ItemCallable$fromSku.class
+API/ItemCallable.class
+API/GetItemWithPrice.class
+API/GetStockTransactions.class

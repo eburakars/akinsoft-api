@@ -7,6 +7,7 @@
     "name": "ALPİNO 6 LI OYUN HAMURU ",
     "blstcode": 99840,
     "tax": 18,
+    "sku": "CEM0100",
     "doc_id": "SF40634",
     "barcode": "8413240602088",
     "price_total": 47
@@ -19,6 +20,7 @@
     "name": "Mikro Not Defteri Çizgili NT-211",
     "blstcode": 99833,
     "tax": 18,
+    "sku": "ŞAHİN214",
     "doc_id": "SF40634",
     "barcode": "8681248724013",
     "price_total": 107.69999999999999
@@ -31,6 +33,7 @@
     "name": "Mikro Tükenmez Kalem Metal pastel renkler",
     "blstcode": 99830,
     "tax": 18,
+    "sku": "ŞAHİN211",
     "doc_id": "SF40634",
     "barcode": "8681248722668",
     "price_total": 19
@@ -43,6 +46,7 @@
     "name": "FABER BAŞLIK KALEMİ DAMLA KIRMIZI",
     "blstcode": 98,
     "tax": 8,
+    "sku": "ADEL2996",
     "doc_id": "SF40633",
     "barcode": "8681241126142",
     "price_total": 3.704
@@ -55,6 +59,7 @@
     "name": "FABER CASTEL KURŞUN KALEM FLAMİNGO",
     "blstcode": 96,
     "tax": 8,
+    "sku": "ADEL2966",
     "doc_id": "SF40633",
     "barcode": "8681241091563",
     "price_total": 2.778
@@ -67,6 +72,7 @@
     "name": "FABER CASTELL DOODLE DESENLI KURSUN KALEM 2B ",
     "blstcode": 96,
     "tax": 8,
+    "sku": "ADEL2963",
     "doc_id": "SF40633",
     "barcode": "8681241091600",
     "price_total": 2.778
@@ -79,6 +85,7 @@
     "name": "KURŞUN KALEM FC FORMÜL",
     "blstcode": 58,
     "tax": 8,
+    "sku": "ADEL2896",
     "doc_id": "SF40633",
     "barcode": "8690826013333",
     "price_total": 3.704
@@ -91,6 +98,7 @@
     "name": "KURŞUN KALEM FC FORMÜL",
     "blstcode": 58,
     "tax": 8,
+    "sku": "ADEL2896",
     "doc_id": "SF40633",
     "barcode": "8690826013333",
     "price_total": 3.704
@@ -103,6 +111,7 @@
     "name": "MIKRO CETVELLİ MİN 2B 75 mm. 0,7",
     "blstcode": 54,
     "tax": 18,
+    "sku": "ST00553",
     "doc_id": "SF40633",
     "barcode": "8697433851303",
     "price_total": 2.119
@@ -115,6 +124,7 @@
     "name": "MIKRO CETVELLİ MİN 2B 75 mm. 0,7",
     "blstcode": 54,
     "tax": 18,
+    "sku": "ST00553",
     "doc_id": "SF40633",
     "barcode": "8697433851303",
     "price_total": 2.119
@@ -127,6 +137,7 @@
     "name": "DOLPHIN DLP-2017-R VERSATİL KALEM",
     "blstcode": 98,
     "tax": 18,
+    "sku": "CEM772",
     "doc_id": "SF40633",
     "barcode": "8698547868157",
     "price_total": 7.203
@@ -139,6 +150,7 @@
     "name": "GALATASARAY OFİS VERSATİL KALEM 0,7",
     "blstcode": 99,
     "tax": 18,
+    "sku": "TİMON003",
     "doc_id": "SF40633",
     "barcode": "8698684375471",
     "price_total": 21.186

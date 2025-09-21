@@ -1,3 +1,5 @@
+import static spark.Spark.*;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -17,6 +19,11 @@ public class App {
     public static CloseableHttpClient httpclient = HttpClients.createDefault();
 
     public static void main(String[] args) throws SQLException, ClientProtocolException, IOException {
+        staticFileLocation("/public");
+        get("/", (req, res) -> {
+            res.redirect("/index.html");
+            return null;
+        });
         new GetItem(con.createFirebirdStatement()).handle("item");
         new GetPrice(con.createFirebirdStatement()).handle("prices");
         new GetItemWithPrice(con.createFirebirdStatement()).handle("itemwithsaleprice");

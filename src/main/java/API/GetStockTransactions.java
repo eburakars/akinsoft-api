@@ -40,9 +40,10 @@ public class GetStockTransactions {
     public JSONArray getResponse(String dateStart, String dateEnd) throws SQLException {
         String query = String.format(
                 """
-                        SELECT STOKHR.TARIHI,STOKHR.BLSTKODU,STOKHR.TUTAR_TURU,STOKHR.EVRAK_NO,STOKHR.KPB_TUTARI,STOKHR.KPB_FIYATI,STOKHR.MIKTARI,STOK.BIRIMI,STOK.STOK_ADI,STOK.BLKODU,STOK.BARKODU,STOK.KDV_ORANI
+                        SELECT STOKHR.TARIHI,STOKHR.BLSTKODU,STOKHR.TUTAR_TURU,STOKHR.EVRAK_NO,STOKHR.KPB_TUTARI,STOKHR.KPB_FIYATI,STOKHR.MIKTARI,STOK.BIRIMI,STOK.STOK_ADI,STOK.BLKODU,STOK.BARKODU,STOK.KDV_ORANI,STOK.STOKKODU
                         FROM STOKHR,STOK
                         WHERE STOK.BLKODU = STOKHR.BLSTKODU AND STOKHR.TARIHI >= '%s' AND STOKHR.TARIHI <= '%s'
+                        ORDER BY STOKHR.TARIHI DESC, STOKHR.EVRAK_NO DESC
                         """,
                 dateStart, dateEnd);
         return parse(query);
@@ -65,6 +66,7 @@ public class GetStockTransactions {
             item.put("name", res.getString("STOK_ADI"));
             item.put("barcode", res.getString("BARKODU"));
             item.put("tax", res.getInt("KDV_ORANI"));
+            item.put("sku", res.getString("STOKKODU"));
             items.put(item);
         }
         return items;

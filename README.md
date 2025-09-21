@@ -121,3 +121,13 @@ Yeni bir API endpoint'i eklemek istiyorsanız:
 1. `src/main/java/API` dizininde yeni bir Java sınıfı oluşturun.
 2. Gerekli veritabanı sorgularını ve JSON dönüşümünü bu sınıfta tanımlayın. Ortak davranışlar için mevcut sınıflardan (örneğin `GetItem`) miras alabilir veya yeni bir interface tanımlayabilirsiniz.
 3. `App.java` dosyasının `main` metodunda, yeni oluşturduğunuz sınıfın bir örneğini alın ve `handle` metodunu çağırın.
+
+## 8. Frontend UI
+
+- Proje artık SparkJava tarafından servis edilen basit bir HTML arayüzü ile gelir. Statik dosyalar `src/main/resources/public/` dizininde tutulur.
+- Backend'i başlattıktan sonra (`mvn exec:java -Dexec.mainClass=App`), tarayıcıdan `http://localhost:4567/` adresine giderek arayüze ulaşabilirsiniz.
+- **Item Lookup:** Barkod veya stok kodu girerek ürünleri ve isterseniz satış fiyatlarını görüntüler.
+- **Price Book:** Satış ve alış fiyatlarını ayrıştırılmış olarak listeler.
+- **Stock Transactions:** Tarih aralığı seçerek stok hareketlerini tablodan takip edebilirsiniz.
+- **Record Stock Transaction:** Çok satırlı formla stok hareketi ekleyebilir, `round` parametresi ile alış/satış tipini belirleyebilirsiniz.
+- Arayüzdeki üst kısımdan API temel adresini değiştirebilir, farklı ortamlar için kayıtlı URL'yi tarayıcı depolamasında saklayabilirsiniz.
